@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class CodigoAC2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+
+        System.out.println("Seja bem vindo para a sua calculadora de medias!");
+
+        System.out.print("\nDigite aqui qual é o tamanho da sua turma: ");
+        int tamanhoTurma = sc.nextInt();
+
+        System.out.print("\nDigite qual a nota mínima para a aprovação (precisa ser maior que 3): ");
+        double notaMinima;
+        do {
+            notaMinima = sc.nextDouble();
+            if (notaMinima < 3) {
+                System.out.print("\nEssa nota mínima está inválida! Digite uma nota maior ou igual a 3: ");
+            }
+        } while (notaMinima < 3);
+
+        System.out.println("Agora, digite quais os pesos das avaliações: ( digite em decimal, por exemplo 0,15 para 15%) ");
+        System.out.print("Peso da AC1: ");
+        double pesoAC1 = sc.nextDouble();
+        System.out.print("Peso da AC2: ");
+        double pesoAC2 = sc.nextDouble();
+        System.out.print("Peso da AG: ");
+        double pesoAG = sc.nextDouble();
+        System.out.print("Peso da AF: ");
+        double pesoAF = sc.nextDouble();
+    }
+}
